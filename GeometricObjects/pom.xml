@@ -20,12 +20,12 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.12.4</version>
                 <configuration>
+                    <systemPropertyVariables>
+                        <valueFromXML>
+                            10
+                        </valueFromXML>
+                    </systemPropertyVariables>
                    <skipTests>false</skipTests>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>
-                            src\test\java\TestNG\testng.xml
-                        </suiteXmlFile>
-                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
@@ -58,7 +58,7 @@
                             <configuration>
                                 <includes>
                                     <include>
-                                        **/TestNG/Addition.java
+                                        **/TestNG/AdditionTest.java
                                     </include>
                                 </includes>
                             </configuration>
@@ -77,7 +77,7 @@
                         <configuration>
                             <includes>
                                 <exclude>
-                                    **/TestNG/FactoryClass.java
+                                    **/TestNG/FactoryClassTest.java
                                 </exclude>
                             </includes>
                         </configuration>
